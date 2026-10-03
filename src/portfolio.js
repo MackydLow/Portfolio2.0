@@ -5,7 +5,7 @@ const about = {
   picture: 'https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png',
 
   description:
-    `Hey, I'm Mack! I'm a third-year Computer Science student ... keep growing as an engineer.`,
+    `I am a second year computing science at Dundee University. I am a highly passionate about sofware development, problem solving and newer developing technologies such as AI and cybersecuity. Through projects over the last year I have developed my skills and want to demonstate them out in a agile work enviroment. I’ve always enjoyed Computing Science and been intrigued on how computers and applications run behind the scenes. Through projects over the last year I have learn’t how to use Java, python, c, linux and web development. I am looking for a interships to further devlop my skills and learn from experinced individuals.`,
   resume: 'https://mackydlow.github.io/Portfolio2.0/resume.pdf',
   social: {
     linkedin: 'https://www.linkedin.com/in/mack-low-a6180a366',
@@ -19,7 +19,7 @@ const projects = [
   {
     name: 'Project 1',
     description:
-      'Hey, I'm Mack! I'm a third-year Computer Science student who loves software, with a growing focus on cybersecurity and AI. I've worked on projects in Java, C, C++, Python, and HTML, and I've used tools like Kali Linux to develop my skills. I'm exploring how systems are attacked and defended, and how AI plays a role on both sides. I'm keen to apply what I've learnt in the real world and keep growing as an engineer.',
+      `A fake social media website built with HTML, CSS and JavaScript.`,
     stack: ['SASS', 'TypeScript', 'React'],
     sourceCode: 'https://github.com',
     livePreview: 'https://github.com',
@@ -28,7 +28,7 @@ const projects = [
   {
     name: 'Project 2',
     description:
-      'Amet asperiores et impedit aliquam consectetur? Voluptates sed a nulla ipsa officia et esse aliquam',
+      `Amet asperiores et impedit aliquam consectetur? Voluptates sed a nulla ipsa officia et esse aliquam`,
     stack: ['SASS', 'TypeScript', 'React'],
     sourceCode: 'https://github.com',
     livePreview: 'https://github.com',
