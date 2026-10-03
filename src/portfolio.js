@@ -5,7 +5,7 @@ const about = {
   picture: 'https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png',
 
   description:
-    'Hey, I'm Mack! I'm a third-year Computer Science student who loves software, with a growing focus on cybersecurity and AI. I've worked on projects in Java, C, C++, Python, and HTML, and I've used tools like Kali Linux to develop my skills. I'm exploring how systems are attacked and defended, and how AI plays a role on both sides. I'm keen to apply what I've learnt in the real world and keep growing as an engineer.',
+    `Hey, I'm Mack! I'm a third-year Computer Science student ... keep growing as an engineer.`,
   resume: 'https://mackydlow.github.io/Portfolio2.0/resume.pdf',
   social: {
     linkedin: 'https://www.linkedin.com/in/mack-low-a6180a366',
