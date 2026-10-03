@@ -6,7 +6,7 @@ const header = {
 
 const about = {
   // all the properties are optional - can be left empty or deleted
-  name: 'John Smith',
+  name: 'Mack Low',
   role: 'Front End Engineer',
   picture: 'https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png',
 
