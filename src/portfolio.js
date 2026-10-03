@@ -1,3 +1,8 @@
+const header = {
+  homepage: 'https://mackydlow.github.io/Portfolio2.0',
+  title: 'ML.',
+}
+
 const about = {
   // all the properties are optional - can be left empty or deleted
   name: 'Mack Low',
