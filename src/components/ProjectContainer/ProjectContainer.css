@@ -1,33 +1,80 @@
 .project {
   padding: 2em;
   margin: 0 auto;
+  width: 100%;
   text-align: center;
   box-shadow: var(--shadow);
-  transition: transform 0.2s linear;
+  border: 2px solid transparent;
+  transition: transform 0.2s linear, border-color 0.2s linear;
 }
-
-.project:hover {
-  transform: translateY(-7px);
+ 
+.project__image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9; /* every picture gets the same shape */
+  object-fit: cover; /* crops instead of stretching */
+  margin-bottom: 1em;
 }
-
+ 
 .project__description {
   margin-top: 1em;
 }
-
+ 
 .project__stack {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin: 1.2em 0;
 }
-
+ 
 .project__stack-item {
   margin: 0.5em;
   font-weight: 500;
   font-size: 0.8rem;
   color: var(--clr-fg-alt);
 }
-
-.project .link--icon {
-  margin-left: 0.5em;
+ 
+.project__footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+ 
+/* ---- clickable cards ---- */
+ 
+.project--clickable {
+  cursor: pointer;
+}
+ 
+.project--clickable:hover,
+.project--clickable:focus-visible {
+  transform: translateY(-7px);
+  border-color: var(--clr-primary);
+  outline: none;
+}
+ 
+.project__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: var(--clr-primary);
+}
+ 
+.project--clickable:hover .project__cta,
+.project--clickable:focus-visible .project__cta {
+  text-decoration: underline;
+}
+ 
+@media (prefers-reduced-motion: reduce) {
+  .project {
+    transition: border-color 0.2s linear;
+  }
+ 
+  .project--clickable:hover,
+  .project--clickable:focus-visible {
+    transform: none;
+  }
 }

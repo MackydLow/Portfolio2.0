@@ -19,33 +19,59 @@ const about = {
 }
 
 const projects = [
-  // projects can be added an removed
-  // if there are no projects, Projects section won't show up
+  // category: 'uni' puts a card under University Projects
+  // category: 'cyber' puts a card under Cybersecurity Projects
+  // delete livePreview or image lines if a project doesn't have one
+ 
+  // ---- University Projects ----
   {
-    name: 'Project 1',
-    description:
-      `A fake social media website built with HTML, CSS and JavaScript.`,
-    stack: ['SASS', 'TypeScript', 'React'],
-    sourceCode: 'https://github.com',
-    livePreview: 'https://github.com',
-    image: 'cleanfolio.png',
+    name: 'Social Media Website',
+    description: `A fake social media website built with HTML, CSS and JavaScript.`,
+    stack: ['HTML', 'CSS', 'JavaScript'],
+    sourceCode: 'https://github.com/MackydLow/REPO-NAME',
+    image: 'social-media.png',
+    category: 'uni',
   },
   {
-    name: 'Project 2',
-    description:
-      `Amet asperiores et impedit aliquam consectetur? Voluptates sed a nulla ipsa officia et esse aliquam`,
-    stack: ['SASS', 'TypeScript', 'React'],
-    sourceCode: 'https://github.com',
-    livePreview: 'https://github.com',
-    image: 'https://github.githubassets.com/assets/GitHub-Logo-ee398b662d42.png',
+    name: 'Uni Project 2',
+    description: `One or two sentences on what it does and what you learnt.`,
+    stack: ['Java'],
+    sourceCode: 'https://github.com/MackydLow/REPO-NAME',
+    image: 'social-media.png',
+    category: 'uni',
   },
   {
-    name: 'Project 3',
-    description:
-      'Amet asperiores et impedit aliquam consectetur? Voluptates sed a nulla ipsa officia et esse aliquam',
-    stack: ['SASS', 'TypeScript', 'React'],
-    sourceCode: 'https://github.com',
-    livePreview: 'https://github.com',
+    name: 'Uni Project 3',
+    description: `One or two sentences on what it does and what you learnt.`,
+    stack: ['C'],
+    sourceCode: 'https://github.com/MackydLow/REPO-NAME',
+    image: 'social-media.png',category: 'uni',
+  },
+ 
+  // ---- Cybersecurity Projects ----
+  {
+    name: 'Cyber Project 1',
+    description: `One or two sentences on what it does and what you learnt.`,
+    stack: ['Python', 'Kali Linux'],
+    sourceCode: 'https://github.com/MackydLow/REPO-NAME',
+    image: 'social-media.png',
+    category: 'cyber',
+  },
+  {
+    name: 'Cyber Project 2',
+    description: `One or two sentences on what it does and what you learnt.`,
+    stack: ['Python'],
+    sourceCode: 'https://github.com/MackydLow/REPO-NAME',
+    image: 'social-media.png',
+    category: 'cyber',
+  },
+  {
+    name: 'Cyber Project 3',
+    description: `One or two sentences on what it does and what you learnt.`,
+    stack: ['Linux'],
+    sourceCode: 'https://github.com/MackydLow/REPO-NAME',
+    image: 'social-media.png',
+    category: 'cyber',
   },
 ]
 
