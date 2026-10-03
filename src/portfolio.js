@@ -1,9 +1,3 @@
-const header = {
-  // all the properties are optional - can be left empty or deleted
-  homepage: 'https://rjshkhr.github.io/cleanfolio',
-  title: 'JS.',
-}
-
 const about = {
   // all the properties are optional - can be left empty or deleted
   name: 'Mack Low',
@@ -11,11 +5,11 @@ const about = {
   picture: 'https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png',
 
   description:
-    'Adipisicing sit fugit ullam unde aliquid sequi Facilis soluta facilis perspiciatis corporis nulla aspernatur. Autem eligendi rerum delectus modi quisquam? Illo ut quasi nemo ipsa cumque perspiciatis! Maiores minima consectetur.',
+    'Hey, I'm Mack! I'm a third-year Computer Science student who loves software, with a growing focus on cybersecurity and AI. I've worked on projects in Java, C, C++, Python, and HTML, and I've used tools like Kali Linux to develop my skills. I'm exploring how systems are attacked and defended, and how AI plays a role on both sides. I'm keen to apply what I've learnt in the real world and keep growing as an engineer.',
   resume: 'https://example.com',
   social: {
-    linkedin: 'https://linkedin.com',
-    github: 'https://github.com',
+    linkedin: 'https://www.linkedin.com/in/mack-low-a6180a366',
+    github: 'https://github.com/MackydLow?tab=repositories',
   },
 }
 
@@ -25,7 +19,7 @@ const projects = [
   {
     name: 'Project 1',
     description:
-      'Amet asperiores et impedit aliquam consectetur? Voluptates sed a nulla ipsa officia et esse aliquam',
+      'Hey, I'm Mack! I'm a third-year Computer Science student who loves software, with a growing focus on cybersecurity and AI. I've worked on projects in Java, C, C++, Python, and HTML, and I've used tools like Kali Linux to develop my skills. I'm exploring how systems are attacked and defended, and how AI plays a role on both sides. I'm keen to apply what I've learnt in the real world and keep growing as an engineer.',
     stack: ['SASS', 'TypeScript', 'React'],
     sourceCode: 'https://github.com',
     livePreview: 'https://github.com',
