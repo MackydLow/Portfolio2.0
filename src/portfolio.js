@@ -95,7 +95,7 @@ const projects = [
     name: 'Movie Recommendation Platform',
     description: `A movie website where users can search films, build a watchlist and leave reviews, powered by a Python backend.`,
     stack: ['Python', 'FastAPI', 'MySQL', 'AWS', 'JavaScript', 'pytest'],
-    image: 'movie.png',
+    image: 'Movie.png',
     team: 'Group project (4 people), University of Dundee',
     subtitle: `A full-stack movie platform where users create an account, search for films, save them to a watchlist and write reviews.`,
     overview: [
@@ -131,7 +131,7 @@ const projects = [
   // ---- Cybersecurity Projects ----
   {
   slug: 'flagchain',
-  category: 'security',
+  category: 'cyber',
   name: 'FlagChain — CTF Writeup Portfolio',
   description: `A public portfolio of penetration testing writeups across 10+ TryHackMe and HackTheBox machines, each documented as a professional client-style report.`,
   stack: ['Kali Linux', 'Nmap', 'Metasploit', 'Python', 'Bash', 'Git', 'GitHub Pages'],
@@ -169,7 +169,7 @@ const projects = [
 },
 {
   slug: 'redsentry',
-  category: 'security',
+  category: 'cyber',
   name: 'RedSentry — Full-Cycle Security Lab',
   description: `A six-phase hands-on security lab covering penetration testing, IDS rule writing, digital forensics, malware analysis, and AI-assisted reporting, run entirely across two isolated VMs.`,
   stack: ['Kali Linux', 'Metasploitable2', 'Metasploit', 'Suricata', 'Elasticsearch', 'Kibana', 'Filebeat', 'Autopsy', 'Ghidra', 'Python', 'Claude API'],
@@ -207,7 +207,7 @@ const projects = [
 },
 {
   slug: 'project-sentinel',
-  category: 'security',
+  category: 'cyber',
   name: 'Project Sentinel — Home SOC',
   description: `A home Security Operations Centre built on the Elastic Stack, ingesting and analysing logs to detect simulated attacks the way a real SOC analyst would.`,
   stack: ['Kali Linux', 'Elasticsearch', 'Kibana', 'Filebeat', 'Auditbeat', 'Metricbeat', 'Suricata', 'Atomic Red Team', 'UFW'],
