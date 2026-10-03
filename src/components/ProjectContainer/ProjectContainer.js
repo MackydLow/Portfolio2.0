@@ -1,10 +1,12 @@
 import uniqid from 'uniqid'
+import ArrowForwardRoundedIcon from '@material-ui/icons/ArrowForwardRounded'
 import GitHubIcon from '@material-ui/icons/GitHub'
 import LaunchIcon from '@material-ui/icons/Launch'
 import './ProjectContainer.css'
  
 const ProjectContainer = ({ project }) => {
-  const isClickable = Boolean(project.sourceCode)
+  const hasDetailsPage = Boolean(project.slug)
+  const hasSourceCode = Boolean(project.sourceCode)
  
   const openSourceCode = () => {
     window.open(project.sourceCode, '_blank', 'noopener,noreferrer')
@@ -15,7 +17,7 @@ const ProjectContainer = ({ project }) => {
     if (event.key === 'Enter') openSourceCode()
   }
  
-  const content = (
+  const cardBody = (
     <>
       {project.image && (
         <img
@@ -42,45 +44,70 @@ const ProjectContainer = ({ project }) => {
           ))}
         </ul>
       )}
+    </>
+  )
  
-      <div className='project__footer'>
-        {isClickable && (
+  // 1. has a slug: the whole card opens the project's own page
+  if (hasDetailsPage) {
+    return (
+      <a
+        href={`#/project/${project.slug}`}
+        className='project project--clickable'
+      >
+        {cardBody}
+        <div className='project__footer'>
+          <span className='project__cta'>
+            View project
+            <ArrowForwardRoundedIcon fontSize='small' />
+          </span>
+        </div>
+      </a>
+    )
+  }
+ 
+  const livePreviewLink = project.livePreview && (
+    <a
+      href={project.livePreview}
+      target='_blank'
+      rel='noopener noreferrer'
+      aria-label='live preview'
+      className='link link--icon'
+      onClick={(event) => event.stopPropagation()}
+    >
+      <LaunchIcon />
+    </a>
+  )
+ 
+  // 2. no slug but a GitHub link: the whole card opens the repo
+  if (hasSourceCode) {
+    return (
+      <div
+        className='project project--clickable'
+        onClick={openSourceCode}
+        onKeyDown={handleKeyDown}
+        role='link'
+        tabIndex={0}
+        aria-label={`${project.name} on GitHub`}
+      >
+        {cardBody}
+        <div className='project__footer'>
           <span className='project__cta'>
             <GitHubIcon fontSize='small' />
             View code on GitHub
           </span>
-        )}
- 
-        {project.livePreview && (
-          <a
-            href={project.livePreview}
-            target='_blank'
-            rel='noopener noreferrer'
-            aria-label='live preview'
-            className='link link--icon'
-            onClick={(event) => event.stopPropagation()}
-          >
-            <LaunchIcon />
-          </a>
-        )}
+          {livePreviewLink}
+        </div>
       </div>
-    </>
-  )
+    )
+  }
  
-  // no GitHub link: a normal, non-clickable card
-  if (!isClickable) return <div className='project'>{content}</div>
- 
-  // GitHub link: the whole card opens the repo
+  // 3. neither: a normal card
   return (
-    <div
-      className='project project--clickable'
-      onClick={openSourceCode}
-      onKeyDown={handleKeyDown}
-      role='link'
-      tabIndex={0}
-      aria-label={`${project.name} on GitHub`}
-    >
-      {content}
+    <div className='project'>
+      {cardBody}
+      {livePreviewLink && (
+        <div className='project__footer'>{livePreviewLink}</div>
+      )}
     </div>
   )
 }

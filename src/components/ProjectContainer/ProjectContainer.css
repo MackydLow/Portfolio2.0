@@ -44,7 +44,9 @@
 /* ---- clickable cards ---- */
  
 .project--clickable {
+  display: block;
   cursor: pointer;
+  color: inherit;
 }
  
 .project--clickable:hover,
