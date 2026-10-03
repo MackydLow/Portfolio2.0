@@ -10,7 +10,7 @@ const about = {
   picture: 'https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png',
 
   description:
-    `I am a second year computing science at Dundee University. I am a highly passionate about sofware development, problem solving and newer developing technologies such as AI and cybersecuity. Through projects over the last year I have developed my skills and want to demonstate them out in a agile work enviroment. I’ve always enjoyed Computing Science and been intrigued on how computers and applications run behind the scenes. Through projects over the last year I have learn’t how to use Java, python, c, linux and web development. I am looking for a interships to further devlop my skills and learn from experinced individuals.`,
+    `I am a third-year Computing Science student at the University of Dundee with a strong interest in software development, problem solving, and emerging technologies, particularly cybersecurity and AI. I have always been curious about how computers and applications work behind the scenes, and through university and personal projects I have built practical experience in Java, C, C++, Python, and web development, as well as working in Linux environments and using tools such as Kali Linux to explore how systems are attacked and defended. I am now seeking an internship where I can apply these skills within an agile team, contribute to real products, and learn from experienced engineers.`,
   resume: 'https://mackydlow.github.io/Portfolio2.0/resume.pdf',
   social: {
     linkedin: 'https://www.linkedin.com/in/mack-low-a6180a366',
@@ -19,59 +19,101 @@ const about = {
 }
 
 const projects = [
-  // category: 'uni' puts a card under University Projects
-  // category: 'cyber' puts a card under Cybersecurity Projects
-  // delete livePreview or image lines if a project doesn't have one
+  // HOW EACH PROJECT WORKS
+  // Card (home page):  name, description, stack, image, category
+  // Project page:      slug, subtitle, overview, role, team, skills, gallery,
+  //                    sourceCode, livePreview
+  // slug = the page address, lowercase-with-dashes, different for every project
+  // category: 'uni' or 'cyber' decides which section the card appears in
+  // Every field is optional except name and slug. Delete any you don't need.
+  // Use backticks ` ` around text so apostrophes (I'm, didn't) are safe.
  
   // ---- University Projects ----
   {
+    slug: 'social-media-website',
+    category: 'uni',
     name: 'Social Media Website',
-    description: `A fake social media website built with HTML, CSS and JavaScript.`,
-    stack: ['HTML', 'CSS', 'JavaScript'],
-    sourceCode: 'https://github.com/MackydLow/REPO-NAME',
+    description: `A Java social network where users add friends, write posts and like each other's posts.`,
+    stack: ['Java', 'Eclipse', 'GitHub', 'macOS'],
     image: 'social-media.png',
-    category: 'uni',
+    team: 'Pair project, University of Dundee',
+    subtitle: `A Java social network where users add friends, write posts and like each other's posts.`,
+    overview: [
+      `Users can add friends, browse their friends' friend lists to find new people, and remove friends at any time. They can view their own friends list and every post they've made.`,
+      `Posting works like Twitter: a text box for writing a post and a like button. Friends can like each other's posts, and users can view or delete their own.`,
+    ],
+    role: [
+      `With only two of us on the project, we both covered a lot of ground. My main responsibility was posts: creating, liking and deleting them. I built this with two classes, a node class that stores each post and a class that creates and manages posts using those nodes.`,
+      `Once our parts were working, my partner and I merged our code and built the main file together. This is where the user interacts with the program, and it calls all of the other classes.`,
+    ],
+    skills: [
+      {
+        name: 'Teamwork',
+        detail: `Splitting the work, keeping each other updated, and merging our code into one working program.`,
+      },
+      {
+        name: 'Problem solving',
+        detail: `Designing how posts are stored and linked, and delivering a working project within a fixed deadline.`,
+      },
+      {
+        name: 'Adaptability',
+        detail: `When half of our original group couldn't contribute, we re-planned the work so the two of us could still deliver everything.`,
+      },
+    ],
+    sourceCode: 'https://github.com/MackydLow/REPO-NAME',
+    // gallery: ['social-media-2.png', 'social-media-3.png'],
   },
   {
+    slug: 'uni-project-2',
+    category: 'uni',
     name: 'Uni Project 2',
-    description: `One or two sentences on what it does and what you learnt.`,
+    description: `One sentence about what it does.`,
     stack: ['Java'],
+    overview: `What the project does.`,
+    role: `What you personally did.`,
     sourceCode: 'https://github.com/MackydLow/REPO-NAME',
-    image: 'social-media.png',
-    category: 'uni',
   },
   {
+    slug: 'uni-project-3',
+    category: 'uni',
     name: 'Uni Project 3',
-    description: `One or two sentences on what it does and what you learnt.`,
+    description: `One sentence about what it does.`,
     stack: ['C'],
+    overview: `What the project does.`,
+    role: `What you personally did.`,
     sourceCode: 'https://github.com/MackydLow/REPO-NAME',
-    image: 'social-media.png',category: 'uni',
   },
  
   // ---- Cybersecurity Projects ----
   {
+    slug: 'cyber-project-1',
+    category: 'cyber',
     name: 'Cyber Project 1',
-    description: `One or two sentences on what it does and what you learnt.`,
+    description: `One sentence about what it does.`,
     stack: ['Python', 'Kali Linux'],
+    overview: `What the project does.`,
+    role: `What you personally did.`,
     sourceCode: 'https://github.com/MackydLow/REPO-NAME',
-    image: 'social-media.png',
-    category: 'cyber',
   },
   {
+    slug: 'cyber-project-2',
+    category: 'cyber',
     name: 'Cyber Project 2',
-    description: `One or two sentences on what it does and what you learnt.`,
+    description: `One sentence about what it does.`,
     stack: ['Python'],
+    overview: `What the project does.`,
+    role: `What you personally did.`,
     sourceCode: 'https://github.com/MackydLow/REPO-NAME',
-    image: 'social-media.png',
-    category: 'cyber',
   },
   {
-    name: 'Cyber Project 3',
-    description: `One or two sentences on what it does and what you learnt.`,
-    stack: ['Linux'],
-    sourceCode: 'https://github.com/MackydLow/REPO-NAME',
-    image: 'social-media.png',
+    slug: 'cyber-project-3',
     category: 'cyber',
+    name: 'Cyber Project 3',
+    description: `One sentence about what it does.`,
+    stack: ['Linux'],
+    overview: `What the project does.`,
+    role: `What you personally did.`,
+    sourceCode: 'https://github.com/MackydLow/REPO-NAME',
   },
 ]
 
