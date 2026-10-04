@@ -1,3 +1,5 @@
+import { RestaurantMenuOutlined } from "@material-ui/icons"
+
 const header = {
   homepage: 'https://mackydlow.github.io/Portfolio2.0',
   title: 'ML.',
@@ -11,7 +13,7 @@ const about = {
 
   description:
     `I am a third-year Computing Science student at the University of Dundee with a strong interest in software development, problem solving, and emerging technologies, particularly cybersecurity and AI. I have always been curious about how computers and applications work behind the scenes, and through university and personal projects I have built practical experience in Java, C, C++, Python, and web development, as well as working in Linux environments and using tools such as Kali Linux to explore how systems are attacked and defended. I am now seeking an internship where I can apply these skills within an agile team, contribute to real products, and learn from experienced engineers.`,
-  CV: 'https://mackydlow.github.io/Portfolio2.0/CV-for-Industrial-Placement.pdf',
+  resume: 'https://mackydlow.github.io/Portfolio2.0/CV-for-Industrial-Placement.pdf',
   social: {
     linkedin: 'https://www.linkedin.com/in/mack-low-a6180a366',
     github: 'https://github.com/MackydLow?tab=repositories',
