@@ -6,8 +6,8 @@ const header = {
 const about = {
   // all the properties are optional - can be left empty or deleted
   name: 'Mack Low',
-  role: 'Computing Science Student at University of Dundee',
-  picture: 'https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png',
+  role: 'Computing Science Student at the University of Dundee',
+  picture: 'me.png',
 
   description:
     `I am a third-year Computing Science student at the University of Dundee with a strong interest in software development, problem solving, and emerging technologies, particularly cybersecurity and AI. I have always been curious about how computers and applications work behind the scenes, and through university and personal projects I have built practical experience in Java, C, C++, Python, and web development, as well as working in Linux environments and using tools such as Kali Linux to explore how systems are attacked and defended. I am now seeking an internship where I can apply these skills within an agile team, contribute to real products, and learn from experienced engineers.`,
@@ -67,27 +67,36 @@ const projects = [
   {
     slug: 'java-project',
     category: 'uni',
-    name: 'Java Project',
-    description: `A social Media Website that is made with Java.`,
-    stack: ['Java', 'GitHub', 'Eclipse', 'MacOs'],
+    name: 'Social Networking App',
+    description: `A Java social networking app where users add friends, write posts and like each other's posts.`,
+    stack: ['Java', 'Eclipse', 'Git', 'GitHub'],
     image: 'java.png',
-    overview: `A social media website, the user is able to make new friends this gives them the ability to view these friends friends to add them as friends as well to increase their list of friends, at any point they can views there lists of friends and any posts they have made but also remove friends. The user is also given the ability to make posts in the style of twitter with a text box and a like button. Any friends they make can like these posts same as the user can like any of their friends posts. The user can delete any of their posts or view them..`,
-    role: `As their was only two of us we both did a lot, my first main responsibilty was to allow the user to create, like or delete posts. This was done through two files a node and a object creating file which calls the node. After joining with my partner we joined are work and contributed on the main file, which is where the user would be and would call all other files..`,
+    team: 'Pair project, University of Dundee',
+    subtitle: `A social networking application built in Java, where users connect with friends and share Twitter-style posts.`,
+    overview: [
+      `Users can add friends, browse their friends' friend lists to find new people, and remove friends at any time. They can view their own friends list and every post they've made.`,
+      `Posting works like Twitter: a text box for writing a post and a like button. Friends can like each other's posts, and users can view or delete their own.`,
+    ],
+    role: [
+      `With only two of us on the project, we both covered a lot of ground. My main responsibility was posts: letting users create, like and delete them. I built this with two classes, a node class that stores each post and a class that creates and manages posts using those nodes.`,
+      `Once our parts were working, my partner and I merged our code and built the main file together. This is where the user interacts with the program, and it calls all of the other classes.`,
+    ],
     skills: [
       {
         name: 'Teamwork',
-        detail: `Being in a group teamwork and communication is used to make the project work.`,
+        detail: `Splitting the work, keeping each other updated, and merging our code into one working program.`,
       },
       {
-        name: 'Critical Thinking',
-        detail: `Thinking critically about the problem and developing effective solutions.`,
+        name: 'Critical thinking',
+        detail: `Breaking the problem down and designing how posts are stored and linked together.`,
       },
       {
         name: 'Adaptability',
-        detail: `when half your group doesn't show up you have to change plans to make it work.`,
+        detail: `When half of our original group couldn't contribute, we re-planned the work so the two of us could still deliver everything.`,
       },
     ],
-    sourceCode: 'https://github.com/MackydLow/Java-FinalProject-Social-Networking-application',
+    sourceCode:
+      'https://github.com/MackydLow/Java-FinalProject-Social-Networking-application',
   },
   {
     slug: 'movie-recommendation-platform',
@@ -139,11 +148,11 @@ const projects = [
   team: 'Solo project',
   subtitle: `A security portfolio where every practice machine attacked is written up with full methodology, CVSS scoring and MITRE ATT&CK mapping, built and hosted entirely from a self-administered Kali Linux VM.`,
   overview: [
-    `Each writeup follows a consistent reconnaissance → enumeration → exploitation → privilege escalation structure, covering web application attacks, Windows exploitation, SMB/NFS chaining, and steganography. Machines included a ProFTPd mod_copy exploit chained with an SMB information leak to steal an SSH key (Kenobi), the EternalBlue/MS17-010 kernel exploit against a Windows Server target (Blue), a time-based blind SQL injection against an outdated CMS (Simple CTF), and a broken client-side authentication scheme bypassed by forging a session cookie, chained into a root-owned cron job hijack via a world-writable /etc/hosts (Overpass).`,
+    `Each writeup follows a consistent reconnaissance → enumeration → exploitation → privilege escalation structure, covering web application attacks, Windows exploitation, SMB/NFS chaining, and steganography. Machines included a ProFTPD mod_copy exploit chained with an SMB information leak to steal an SSH key (Kenobi), the EternalBlue/MS17-010 SMBv1 remote code execution exploit against a Windows Server target (Blue), a time-based blind SQL injection against an outdated CMS (Simple CTF), and a broken client-side authentication scheme bypassed by forging a session cookie, chained into a root-owned cron job hijack via a world-writable /etc/hosts (Overpass).`,
     `The whole environment was self-administered: a Kali Linux VM run under UTM on Apple Silicon, bridged onto the home network for file transfer, with OpenVPN tunnels into each platform's isolated lab network. The portfolio itself is a Jekyll-themed static site on GitHub Pages, built from Markdown writeups with embedded screenshots as evidence for every stage of each exploit.`,
   ],
   role: [
-    `I ran every stage of every engagement personally — port scanning and service enumeration with Nmap, directory brute-forcing with Gobuster, credential attacks with Hydra, and exploitation using a mix of public exploit scripts, Metasploit modules, and manual techniques (PHP upload filter bypasses, SQL injection, cookie forgery, PATH-variable privilege escalation hijacking).`,
+    `I ran every stage of every engagement personally — port scanning and service enumeration with Nmap, directory brute-forcing with Gobuster, credential attacks with Hydra, and exploitation using a mix of public exploit scripts, Metasploit modules, and manual techniques (PHP upload filter bypasses, SQL injection, cookie forgery, PATH-variable hijacking for privilege escalation).`,
     `I diagnosed and fixed real infrastructure problems along the way: an ISP content filter silently corrupting package downloads (fixed by switching Kali mirrors), VPN interface naming collisions, and a GitHub Pages table-rendering bug eventually traced to a build/cache delay rather than a markdown syntax error.`,
     `I wrote every report from scratch, mapping each vulnerability to its CWE classification, a CVSS severity score, and the specific MITRE ATT&CK technique it corresponds to, with concrete, actionable remediation advice for each finding rather than generic security boilerplate.`,
   ],
@@ -219,7 +228,7 @@ const projects = [
     `Custom detection rules were written in Kibana's Security app and mapped to specific MITRE ATT&CK techniques, then validated by actually running the attacks they were meant to catch — SSH brute forcing with Hydra, port scanning with Nmap, and simulated reverse shell activity — all contained to localhost inside the isolated VM. Several rules failed to fire on the first attempt for genuinely different reasons each time, each one diagnosed by inspecting the raw indexed data directly in Elasticsearch rather than guessing at the fix.`,
   ],
   role: [
-    `I built the entire stack from a bare Kali Linux install: hardening the system first (static hostname, least-privilege analyst user, firewall rules), then installing and configuring Elasticsearch, Kibana, and the Beats agents, including working through xpack security setup, encryption key generation, and authenticated Beats output configuration.`,
+    `I built the entire stack from a bare Kali Linux install: hardening the system first (static hostname, least-privilege analyst user, firewall rules), then installing and configuring Elasticsearch, Kibana, and the Beats agents, including working through X-Pack security setup, encryption key generation, and authenticated Beats output configuration.`,
     `I wrote and debugged every detection rule myself. The SSH brute-force rule alone required three separate fixes — a structured field that didn't actually exist in the indexed data, a log message format specific to Kali's OpenSSH build rather than Debian's, and Filebeat silently failing to ship logs at all after security was enabled. I diagnosed each by querying Elasticsearch directly with curl and reading the raw documents rather than assuming.`,
     `I ran every attack simulation myself, entirely confined to the VM's isolated host-only network or localhost, and built a four-panel Kibana dashboard (event volume, failed login trend, top source IPs, alert severity) to review the results the way an analyst would triage incoming alerts.`,
   ],
@@ -246,33 +255,28 @@ const projects = [
 ]
 
 const skills = [
-  // skills can be added or removed
-  // if there are no skills, Skills section won't show up
   'Python',
   'Java',
-  'JavaScript',
   'C',
+  'C++',
+  'JavaScript',
   'HTML',
   'CSS',
-  'PHP',
+  'SQL',
+  'PyTorch',
   'FastAPI',
   'MySQL',
-  'C++',
-  'Python',
   'Kali Linux',
   'Nmap',
   'Metasploit',
-  'CSS',
-  'SQL',
-  'GitHub',
-  'PyTorch',
   'Suricata',
   'Elasticsearch',
   'Kibana',
+  'Git',
+  'GitHub',
 ]
 
 const contact = {
-  // email is optional - if left empty Contact section won't show up
   email: '2636498@dundee.ac.uk',
 }
 
