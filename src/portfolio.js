@@ -75,7 +75,7 @@ const projects = [
     subtitle: `A social networking application built in Java, where users connect with friends and share Twitter-style posts.`,
     overview: [
       `Users can add friends, browse their friends' friend lists to find new people, and remove friends at any time. They can view their own friends list and every post they've made.`,
-      `Posting works like Twitter: a text box for writing a post and a like button. Friends can like each other's posts, and users can view or delete their own.`,
+      `Each friend comes with automatically generated posts, which users can browse and like, with every post showing its author, date and number of likes. Friends can also be filtered by hometown or workplace, and the friends list can be saved to and loaded from a file.`,
     ],
     role: [
       `With only two of us on the project, we both covered a lot of ground. My main responsibility was posts: letting users create, like and delete them. I built this with two classes, a node class that stores each post and a class that creates and manages posts using those nodes.`,
@@ -219,7 +219,7 @@ const projects = [
   category: 'cyber',
   name: 'Project Sentinel — Home SOC',
   description: `A home Security Operations Centre built on the Elastic Stack, ingesting and analysing logs to detect simulated attacks the way a real SOC analyst would.`,
-  stack: ['Kali Linux', 'Elasticsearch', 'Kibana', 'Filebeat', 'Auditbeat', 'Metricbeat', 'Suricata', 'Atomic Red Team', 'UFW'],
+  stack: ['Kali Linux', 'Elasticsearch', 'Kibana', 'Filebeat', 'Auditbeat', 'Metricbeat', 'Suricata', 'Atomic Red Team', 'UFW', 'Hydra', 'Nmap'],
   image: 'home-soc.png',
   team: 'Solo project',
   subtitle: `A fully self-built SOC replicating what a real analyst does day to day — ingesting logs at scale, writing detection rules, simulating attacks safely, and investigating the resulting alerts.`,
